@@ -1,0 +1,227 @@
+{
+ "Version": 1,
+ "Metadata": {
+  "Project": "CueLab",
+  "Pattern": "star",
+  "Description": "Огибающая громкости по кривой A, резкость по спектральному центроиду"
+ },
+ "Pattern": [
+  {
+   "Event": {
+    "Time": 0.0,
+    "EventType": "HapticContinuous",
+    "EventDuration": 0.544,
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 1.0
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.0,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 1.0
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.486
+     }
+    ]
+   }
+  },
+  {
+   "ParameterCurve": {
+    "ParameterID": "HapticIntensityControl",
+    "Time": 0,
+    "ParameterCurveControlPoints": [
+     {
+      "Time": 0.0,
+      "ParameterValue": 1.0
+     },
+     {
+      "Time": 0.032,
+      "ParameterValue": 0.863
+     },
+     {
+      "Time": 0.064,
+      "ParameterValue": 0.679
+     },
+     {
+      "Time": 0.096,
+      "ParameterValue": 0.547
+     },
+     {
+      "Time": 0.128,
+      "ParameterValue": 0.48
+     },
+     {
+      "Time": 0.16,
+      "ParameterValue": 0.425
+     },
+     {
+      "Time": 0.192,
+      "ParameterValue": 0.4
+     },
+     {
+      "Time": 0.224,
+      "ParameterValue": 0.43
+     },
+     {
+      "Time": 0.256,
+      "ParameterValue": 0.372
+     },
+     {
+      "Time": 0.288,
+      "ParameterValue": 0.328
+     },
+     {
+      "Time": 0.352,
+      "ParameterValue": 0.293
+     },
+     {
+      "Time": 0.384,
+      "ParameterValue": 0.249
+     },
+     {
+      "Time": 0.416,
+      "ParameterValue": 0.202
+     },
+     {
+      "Time": 0.448,
+      "ParameterValue": 0.159
+     },
+     {
+      "Time": 0.48,
+      "ParameterValue": 0.112
+     },
+     {
+      "Time": 0.512,
+      "ParameterValue": 0.065
+     },
+     {
+      "Time": 0.544,
+      "ParameterValue": 0.023
+     },
+     {
+      "Time": 0.704,
+      "ParameterValue": 0.0
+     }
+    ]
+   }
+  },
+  {
+   "ParameterCurve": {
+    "ParameterID": "HapticSharpnessControl",
+    "Time": 0,
+    "ParameterCurveControlPoints": [
+     {
+      "Time": 0.0,
+      "ParameterValue": -0.014
+     },
+     {
+      "Time": 0.032,
+      "ParameterValue": -0.2
+     },
+     {
+      "Time": 0.064,
+      "ParameterValue": -0.205
+     },
+     {
+      "Time": 0.096,
+      "ParameterValue": -0.127
+     },
+     {
+      "Time": 0.128,
+      "ParameterValue": 0.03
+     },
+     {
+      "Time": 0.16,
+      "ParameterValue": 0.036
+     },
+     {
+      "Time": 0.192,
+      "ParameterValue": 0.023
+     },
+     {
+      "Time": 0.224,
+      "ParameterValue": 0.126
+     },
+     {
+      "Time": 0.288,
+      "ParameterValue": 0.099
+     },
+     {
+      "Time": 0.352,
+      "ParameterValue": 0.156
+     },
+     {
+      "Time": 0.48,
+      "ParameterValue": 0.133
+     },
+     {
+      "Time": 0.704,
+      "ParameterValue": 0.133
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.1093,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.547
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.373
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.2213,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.435
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.626
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.328,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.417
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.629
+     }
+    ]
+   }
+  }
+ ]
+}

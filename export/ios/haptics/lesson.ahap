@@ -1,0 +1,686 @@
+{
+ "Version": 1,
+ "Metadata": {
+  "Project": "CueLab",
+  "Pattern": "lesson",
+  "Description": "Огибающая громкости по кривой A, резкость по спектральному центроиду"
+ },
+ "Pattern": [
+  {
+   "Event": {
+    "Time": 0.0,
+    "EventType": "HapticContinuous",
+    "EventDuration": 0.576,
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 1.0
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.0,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 1.0
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.325
+     }
+    ]
+   }
+  },
+  {
+   "ParameterCurve": {
+    "ParameterID": "HapticIntensityControl",
+    "Time": 0,
+    "ParameterCurveControlPoints": [
+     {
+      "Time": 0.0,
+      "ParameterValue": 0.989
+     },
+     {
+      "Time": 0.032,
+      "ParameterValue": 0.766
+     },
+     {
+      "Time": 0.064,
+      "ParameterValue": 0.611
+     },
+     {
+      "Time": 0.096,
+      "ParameterValue": 0.447
+     },
+     {
+      "Time": 0.128,
+      "ParameterValue": 0.979
+     },
+     {
+      "Time": 0.16,
+      "ParameterValue": 0.853
+     },
+     {
+      "Time": 0.192,
+      "ParameterValue": 0.678
+     },
+     {
+      "Time": 0.224,
+      "ParameterValue": 0.493
+     },
+     {
+      "Time": 0.256,
+      "ParameterValue": 0.939
+     },
+     {
+      "Time": 0.288,
+      "ParameterValue": 0.857
+     },
+     {
+      "Time": 0.32,
+      "ParameterValue": 0.647
+     },
+     {
+      "Time": 0.352,
+      "ParameterValue": 0.467
+     },
+     {
+      "Time": 0.384,
+      "ParameterValue": 0.867
+     },
+     {
+      "Time": 0.416,
+      "ParameterValue": 0.871
+     },
+     {
+      "Time": 0.448,
+      "ParameterValue": 0.678
+     },
+     {
+      "Time": 0.48,
+      "ParameterValue": 0.512
+     },
+     {
+      "Time": 0.512,
+      "ParameterValue": 0.361
+     },
+     {
+      "Time": 0.544,
+      "ParameterValue": 0.169
+     },
+     {
+      "Time": 0.576,
+      "ParameterValue": 0.0
+     },
+     {
+      "Time": 0.704,
+      "ParameterValue": 0.896
+     },
+     {
+      "Time": 0.736,
+      "ParameterValue": 0.904
+     },
+     {
+      "Time": 0.768,
+      "ParameterValue": 0.746
+     },
+     {
+      "Time": 0.8,
+      "ParameterValue": 0.579
+     },
+     {
+      "Time": 0.832,
+      "ParameterValue": 0.398
+     },
+     {
+      "Time": 0.864,
+      "ParameterValue": 0.231
+     },
+     {
+      "Time": 0.896,
+      "ParameterValue": 0.056
+     },
+     {
+      "Time": 0.928,
+      "ParameterValue": 0.0
+     },
+     {
+      "Time": 0.992,
+      "ParameterValue": 0.719
+     },
+     {
+      "Time": 1.024,
+      "ParameterValue": 0.892
+     },
+     {
+      "Time": 1.056,
+      "ParameterValue": 0.723
+     },
+     {
+      "Time": 1.088,
+      "ParameterValue": 0.531
+     },
+     {
+      "Time": 1.12,
+      "ParameterValue": 0.361
+     },
+     {
+      "Time": 1.152,
+      "ParameterValue": 0.202
+     },
+     {
+      "Time": 1.184,
+      "ParameterValue": 0.0
+     },
+     {
+      "Time": 1.376,
+      "ParameterValue": 0.854
+     },
+     {
+      "Time": 1.408,
+      "ParameterValue": 1.0
+     },
+     {
+      "Time": 1.44,
+      "ParameterValue": 0.904
+     },
+     {
+      "Time": 1.472,
+      "ParameterValue": 0.716
+     },
+     {
+      "Time": 1.504,
+      "ParameterValue": 0.512
+     },
+     {
+      "Time": 1.536,
+      "ParameterValue": 0.433
+     },
+     {
+      "Time": 1.6,
+      "ParameterValue": 0.377
+     },
+     {
+      "Time": 1.632,
+      "ParameterValue": 0.336
+     },
+     {
+      "Time": 1.664,
+      "ParameterValue": 0.296
+     },
+     {
+      "Time": 1.728,
+      "ParameterValue": 0.359
+     },
+     {
+      "Time": 1.76,
+      "ParameterValue": 0.315
+     },
+     {
+      "Time": 1.792,
+      "ParameterValue": 0.27
+     },
+     {
+      "Time": 1.824,
+      "ParameterValue": 0.225
+     },
+     {
+      "Time": 1.856,
+      "ParameterValue": 0.181
+     },
+     {
+      "Time": 1.888,
+      "ParameterValue": 0.187
+     },
+     {
+      "Time": 1.952,
+      "ParameterValue": 0.118
+     },
+     {
+      "Time": 1.984,
+      "ParameterValue": 0.073
+     },
+     {
+      "Time": 2.016,
+      "ParameterValue": 0.027
+     },
+     {
+      "Time": 2.144,
+      "ParameterValue": 0.0
+     }
+    ]
+   }
+  },
+  {
+   "ParameterCurve": {
+    "ParameterID": "HapticSharpnessControl",
+    "Time": 0,
+    "ParameterCurveControlPoints": [
+     {
+      "Time": 0.0,
+      "ParameterValue": -0.175
+     },
+     {
+      "Time": 0.032,
+      "ParameterValue": -0.331
+     },
+     {
+      "Time": 0.064,
+      "ParameterValue": -0.315
+     },
+     {
+      "Time": 0.096,
+      "ParameterValue": -0.325
+     },
+     {
+      "Time": 0.128,
+      "ParameterValue": -0.088
+     },
+     {
+      "Time": 0.16,
+      "ParameterValue": -0.246
+     },
+     {
+      "Time": 0.224,
+      "ParameterValue": -0.261
+     },
+     {
+      "Time": 0.256,
+      "ParameterValue": 0.13
+     },
+     {
+      "Time": 0.288,
+      "ParameterValue": -0.182
+     },
+     {
+      "Time": 0.352,
+      "ParameterValue": -0.201
+     },
+     {
+      "Time": 0.384,
+      "ParameterValue": 0.116
+     },
+     {
+      "Time": 0.416,
+      "ParameterValue": -0.097
+     },
+     {
+      "Time": 0.48,
+      "ParameterValue": -0.118
+     },
+     {
+      "Time": 0.704,
+      "ParameterValue": 0.077
+     },
+     {
+      "Time": 0.736,
+      "ParameterValue": -0.169
+     },
+     {
+      "Time": 0.768,
+      "ParameterValue": -0.179
+     },
+     {
+      "Time": 0.8,
+      "ParameterValue": -0.176
+     },
+     {
+      "Time": 0.832,
+      "ParameterValue": -0.177
+     },
+     {
+      "Time": 0.992,
+      "ParameterValue": 0.279
+     },
+     {
+      "Time": 1.024,
+      "ParameterValue": 0.112
+     },
+     {
+      "Time": 1.056,
+      "ParameterValue": -0.053
+     },
+     {
+      "Time": 1.088,
+      "ParameterValue": -0.123
+     },
+     {
+      "Time": 1.12,
+      "ParameterValue": -0.144
+     },
+     {
+      "Time": 1.344,
+      "ParameterValue": -0.144
+     },
+     {
+      "Time": 1.376,
+      "ParameterValue": -0.01
+     },
+     {
+      "Time": 1.408,
+      "ParameterValue": -0.125
+     },
+     {
+      "Time": 1.472,
+      "ParameterValue": -0.175
+     },
+     {
+      "Time": 1.504,
+      "ParameterValue": -0.198
+     },
+     {
+      "Time": 1.536,
+      "ParameterValue": -0.014
+     },
+     {
+      "Time": 1.568,
+      "ParameterValue": 0.143
+     },
+     {
+      "Time": 1.6,
+      "ParameterValue": 0.147
+     },
+     {
+      "Time": 1.664,
+      "ParameterValue": 0.133
+     },
+     {
+      "Time": 1.728,
+      "ParameterValue": 0.272
+     },
+     {
+      "Time": 1.76,
+      "ParameterValue": 0.237
+     },
+     {
+      "Time": 1.824,
+      "ParameterValue": 0.196
+     },
+     {
+      "Time": 1.856,
+      "ParameterValue": 0.181
+     },
+     {
+      "Time": 1.888,
+      "ParameterValue": 0.214
+     },
+     {
+      "Time": 1.92,
+      "ParameterValue": 0.264
+     },
+     {
+      "Time": 2.144,
+      "ParameterValue": 0.264
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.0507,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.611
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.185
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.136,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.979
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.412
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.2693,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.939
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.63
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.4027,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.871
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.403
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.704,
+    "EventType": "HapticContinuous",
+    "EventDuration": 0.192,
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 1.0
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.7173,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.896
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.577
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.776,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.746
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.321
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.992,
+    "EventType": "HapticContinuous",
+    "EventDuration": 0.192,
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 1.0
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 1.0213,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.892
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.612
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 1.0747,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.531
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.377
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 1.376,
+    "EventType": "HapticContinuous",
+    "EventDuration": 0.64,
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 1.0
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 1.4,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 1.0
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.375
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 1.464,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.716
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.325
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 1.5493,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.438
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.486
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 1.72,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.428
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.772
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 1.896,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.396
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.714
+     }
+    ]
+   }
+  }
+ ]
+}

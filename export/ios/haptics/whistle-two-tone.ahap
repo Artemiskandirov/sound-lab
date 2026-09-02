@@ -1,0 +1,235 @@
+{
+ "Version": 1,
+ "Metadata": {
+  "Project": "CueLab",
+  "Pattern": "whistle-two-tone",
+  "Description": "Огибающая громкости по кривой A, резкость по спектральному центроиду"
+ },
+ "Pattern": [
+  {
+   "Event": {
+    "Time": 0.0,
+    "EventType": "HapticContinuous",
+    "EventDuration": 0.576,
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 1.0
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "ParameterCurve": {
+    "ParameterID": "HapticIntensityControl",
+    "Time": 0,
+    "ParameterCurveControlPoints": [
+     {
+      "Time": 0.0,
+      "ParameterValue": 0.972
+     },
+     {
+      "Time": 0.16,
+      "ParameterValue": 1.0
+     },
+     {
+      "Time": 0.288,
+      "ParameterValue": 0.976
+     },
+     {
+      "Time": 0.352,
+      "ParameterValue": 0.977
+     },
+     {
+      "Time": 0.384,
+      "ParameterValue": 0.976
+     },
+     {
+      "Time": 0.416,
+      "ParameterValue": 0.977
+     },
+     {
+      "Time": 0.48,
+      "ParameterValue": 0.929
+     },
+     {
+      "Time": 0.512,
+      "ParameterValue": 0.761
+     },
+     {
+      "Time": 0.544,
+      "ParameterValue": 0.12
+     },
+     {
+      "Time": 0.576,
+      "ParameterValue": 0.0
+     }
+    ]
+   }
+  },
+  {
+   "ParameterCurve": {
+    "ParameterID": "HapticSharpnessControl",
+    "Time": 0,
+    "ParameterCurveControlPoints": [
+     {
+      "Time": 0.0,
+      "ParameterValue": -0.006
+     },
+     {
+      "Time": 0.064,
+      "ParameterValue": -0.002
+     },
+     {
+      "Time": 0.192,
+      "ParameterValue": -0.005
+     },
+     {
+      "Time": 0.224,
+      "ParameterValue": -0.005
+     },
+     {
+      "Time": 0.256,
+      "ParameterValue": -0.082
+     },
+     {
+      "Time": 0.288,
+      "ParameterValue": -0.106
+     },
+     {
+      "Time": 0.416,
+      "ParameterValue": -0.102
+     },
+     {
+      "Time": 0.48,
+      "ParameterValue": -0.106
+     },
+     {
+      "Time": 0.512,
+      "ParameterValue": -0.102
+     },
+     {
+      "Time": 0.576,
+      "ParameterValue": -0.121
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.008,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.972
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.494
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.0987,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 1.0
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.497
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.1733,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 1.0
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.496
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.248,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 1.0
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.418
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.3813,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.976
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.398
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.4453,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.974
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.394
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.5413,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 0.392
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.379
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "Version": 1,
+ "Metadata": {
+  "Project": "CueLab",
+  "Pattern": "whistle-tiny",
+  "Description": "Огибающая громкости по кривой A, резкость по спектральному центроиду"
+ },
+ "Pattern": [
+  {
+   "Event": {
+    "Time": 0.0,
+    "EventType": "HapticContinuous",
+    "EventDuration": 0.096,
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 1.0
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "ParameterCurve": {
+    "ParameterID": "HapticIntensityControl",
+    "Time": 0,
+    "ParameterCurveControlPoints": [
+     {
+      "Time": 0.0,
+      "ParameterValue": 0.998
+     },
+     {
+      "Time": 0.032,
+      "ParameterValue": 1.0
+     },
+     {
+      "Time": 0.064,
+      "ParameterValue": 0.924
+     },
+     {
+      "Time": 0.096,
+      "ParameterValue": 0.0
+     }
+    ]
+   }
+  },
+  {
+   "ParameterCurve": {
+    "ParameterID": "HapticSharpnessControl",
+    "Time": 0,
+    "ParameterCurveControlPoints": [
+     {
+      "Time": 0.0,
+      "ParameterValue": 0.188
+     },
+     {
+      "Time": 0.032,
+      "ParameterValue": 0.232
+     },
+     {
+      "Time": 0.064,
+      "ParameterValue": 0.268
+     },
+     {
+      "Time": 0.096,
+      "ParameterValue": 0.269
+     }
+    ]
+   }
+  },
+  {
+   "Event": {
+    "Time": 0.0453,
+    "EventType": "HapticTransient",
+    "EventParameters": [
+     {
+      "ParameterID": "HapticIntensity",
+      "ParameterValue": 1.0
+     },
+     {
+      "ParameterID": "HapticSharpness",
+      "ParameterValue": 0.732
+     }
+    ]
+   }
+  }
+ ]
+}
