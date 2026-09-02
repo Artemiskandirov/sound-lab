@@ -1,0 +1,31 @@
+{
+ "sounds": 94,
+ "variants": 293,
+ "categories": 14,
+ "platforms": {
+  "web": {
+   "audio": "opus + aac",
+   "haptics": "cuelab-haptics.js",
+   "amplitude": false,
+   "maxPatternEntries": 9
+  },
+  "ios": {
+   "audio": "m4a (aac)",
+   "haptics": "ahap",
+   "amplitude": true,
+   "sharpness": true
+  },
+  "android": {
+   "audio": "ogg в res/raw",
+   "haptics": "VibrationEffect.createWaveform",
+   "amplitude": true,
+   "sharpness": false
+  }
+ },
+ "bytes": {
+  "masters": 9845916,
+  "web": 4643533,
+  "ios": 2276802,
+  "android": 2545441
+ }
+}
