@@ -1,0 +1,6 @@
+# Аудио и картинки — бинарные: git не должен трогать переводы строк
+*.ogg   binary
+*.m4a   binary
+*.flac  binary
+*.wav   binary
+*.png   binary

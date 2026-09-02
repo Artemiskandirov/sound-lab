@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f5f5f7">
+<title>CueLab — звук и вибро для интерфейсов</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand"><strong>CueLab</strong><small>v13.9 · звук и синхронное вибро</small></div>
+  <div class="top-actions">
+    <label class="top-toggle"><input id="soundEnabled" type="checkbox" checked><span>Звук</span></label>
+    <label class="top-toggle"><input id="hapticEnabled" type="checkbox" checked><span>Вибро</span></label>
+    <span class="status" id="loadStatus">Загрузка…</span>
+  </div>
+</header>
+
+<main class="shell">
+  <aside class="list-pane">
+    <div class="pane-head">
+      <span class="eyebrow">Библиотека</span>
+      <h1><span id="soundCount">0</span> звуков</h1>
+    </div>
+    <div class="cat-strip" id="catStrip"></div>
+    <div class="sound-list" id="soundList"></div>
+  </aside>
+
+  <section class="detail-pane">
+    <div class="detail-head">
+      <div>
+        <span class="eyebrow" id="detailMeta">—</span>
+        <h2 id="detailTitle">—</h2>
+        <p id="detailNote">—</p>
+      </div>
+      <div class="head-buttons">
+        <button class="btn btn-dark" id="playButton" type="button">Играть</button>
+        <button class="btn btn-light" id="stopButton" type="button">Стоп</button>
+      </div>
+    </div>
+
+    <section class="card">
+      <div class="card-head"><span>Звук и вибро на одной шкале</span><small>вибро повторяет огибающую</small></div>
+      <canvas id="waveCanvas" height="130"></canvas>
+      <canvas id="hapticCanvas" height="78"></canvas>
+      <div class="variant-row" id="variantRow"></div>
+      <p class="metric-note">Пунктиром отмечены границы вызовов <code>navigator.vibrate</code>: спецификация ограничивает паттерн десятью записями, поэтому длинная дорожка выдаётся несколькими вызовами встык — иначе всё, что дальше десятой записи, браузер отбрасывает, и вибро обрывается в самом начале. Оранжевые риски снизу — щелчки переключателя для iPhone: там длительной вибрации нет как примитива, и она собирается из них. Цвет отрезков — яркость звука на этом участке: фиолетовое глухое, оранжевое звонкое. Яркость входит в силу, а сила и есть частота щелчков, поэтому гонг ощущается крупным зерном раз в 56 мс, а свисток — гладким раз в 16 мс.</p>
+    </section>
+
+    <section class="card">
+      <div class="card-head"><span>Измеренный профиль</span><small>объективная проверка</small></div>
+      <div class="metrics" id="metrics"></div>
+    </section>
+
+    <section class="card wide-card">
+      <div class="card-head"><span>Экспорт этого звука</span><small>отдельно под каждую платформу</small></div>
+      <div class="export-panel" id="exportPanel"></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head"><span>Вибро в браузере</span><small id="diagEngine">движок web-haptics</small></div>
+      <p class="metric-note">Движок здесь — порт <a href="https://github.com/lochie/web-haptics">web-haptics</a> Лохи Экcона (MIT). Там, где есть <code>navigator.vibrate</code>, играет он, а сила имитируется широтно-импульсной модуляцией: импульс режется на окна по 20 мс, доля включённого равна силе. Там, где его нет (все браузеры на iPhone — они все на WebKit), вибрация складывается из щелчков системного переключателя <code>&lt;input type="checkbox" switch&gt;</code>: интервал между щелчками равен <code>16 + (1−сила)·184</code> мс, то есть на полной силе щелчок каждый кадр. Сверху добавлена нарезка на куски по десять записей — спецификация Vibration API задаёт «Let max length have the value 10» и обрезает остальное.</p>
+      <div class="hmode-row">
+        <span>Режим:</span>
+        <button class="btn btn-light is-on" type="button" data-hmode="dense">Плотный</button>
+        <button class="btn btn-light" type="button" data-hmode="simple">Простой</button>
+      </div>
+      <div class="hmode-row">
+        <span>Движок:</span>
+        <button class="btn btn-light is-on" type="button" data-hengine="auto">Авто</button>
+        <button class="btn btn-light" type="button" data-hengine="vibrate">Vibration API</button>
+        <button class="btn btn-light" type="button" data-hengine="switch">Переключатель</button>
+      </div>
+      <div class="hmode-row">
+        <label class="top-toggle"><input type="checkbox" id="showSwitch"><span>показать переключатель на экране</span></label>
+        <label class="top-toggle"><input type="checkbox" id="debugSwitch"><span>щёлкать им и там, где есть vibrate</span></label>
+      </div>
+      <div class="diag" id="diagBody"></div>
+      <p class="metric-note">Держать одну секунду на разной силе — самая честная проверка непрерывности: сила и есть частота щелчков.</p>
+      <div class="diag-tests" id="diagTests"></div>
+      <p class="metric-note">Ниже — пресеты самого web-haptics, ровно те же, что на <a href="https://haptics.lochie.me/">haptics.lochie.me</a>. Они здесь, чтобы сравнить с эталоном на одном и том же устройстве, не переключаясь между вкладками.</p>
+      <div class="diag-tests" id="presetTests"></div>
+    </section>
+
+    <section class="card wide-card">
+      <div class="card-head"><span>Песочница</span><small id="pgCount">—</small></div>
+      <p class="metric-note">У каждого элемента свой звук и синхронное вибро: оба запускаются из одного обработчика жеста. Это не украшение — Vibration API требует пользовательской активации, а в Safari системный хаптик срабатывает только в момент касания, поэтому любая задержка между жестом и вызовом ломает вибрацию.</p>
+      <div class="playground" id="playground"></div>
+    </section>
+
+    <footer class="foot">CueLab v13.9 · звуки посчитаны офлайн физическими моделями, вибро выведено из формы волны · по нажатию ничего не скроллится</footer>
+  </section>
+</main>
+
+<div class="toast" id="toast" role="status"></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "name": "CueLab",
+  "version": "13.9.0",
+  "build": "2026-09-02-long-sounds-and-native",
+  "approach": "offline physical modelling -> Opus + AAC samples; haptics derived from waveform",
+  "sounds": 94,
+  "variants": 293,
+  "audioFiles": 586,
+  "categories": 14,
+  "stereoScenes": 16,
+  "hapticPatterns": 94,
+  "formats": [
+    "opus",
+    "aac"
+  ],
+  "hapticMaxEntries": 9,
+  "hapticTotalPulses": 285,
+  "export": {
+    "masters": "flac 48k/16, без потерь",
+    "web": "opus + aac + cuelab-haptics.js",
+    "ios": "m4a + ahap + swift",
+    "android": "ogg res/raw + VibrationEffect + kotlin"
+  },
+  "hapticEventsNative": 569,
+  "reproducible": "рендер детерминирован: crc32 вместо hash(), три запуска дают побитово одинаковый результат",
+  "hapticImpulsesWeb": 758,
+  "hapticVibrateCalls": 642,
+  "playgroundElements": 114,
+  "iosSwitchTicks": 1629,
+  "iosSwitchTickMinMs": 26,
+  "iosSwitchTickMaxMs": 90,
+  "iosSwitchVariants": [
+    "label",
+    "single",
+    "inline",
+    "visible"
+  ],
+  "iosSwitchDefault": "label",
+  "hapticEngine": "web-haptics port (MIT, Lochie Axon)",
+  "hapticSegments": 1328,
+  "hapticClicks": 1657,
+  "clickGapFormulaMs": "16 + (1 - intensity) * 184",
+  "loudnessWeighting": "A (IEC 61672)",
+  "brightnessToGrain": "16..56 ms click interval",
+  "brightnessCentroidCorrelation": 0.903,
+  "ahapContinuousEvents": 136,
+  "ahapTransients": 569,
+  "ahapCurvePoints": 3040,
+  "androidPrimitives": 549,
+  "androidWaveformSteps": 1955,
+  "onsetArticulationLong": 0.85
+}
